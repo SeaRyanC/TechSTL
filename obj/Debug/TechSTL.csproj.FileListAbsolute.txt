@@ -1,0 +1,5 @@
+D:\git\Misc\TechSTL\TechSTL\bin\TechSTL.dll
+D:\git\Misc\TechSTL\TechSTL\bin\TechSTL.pdb
+D:\git\Misc\TechSTL\TechSTL\obj\Debug\TechSTL.csprojResolveAssemblyReference.cache
+D:\git\Misc\TechSTL\TechSTL\obj\Debug\TechSTL.dll
+D:\git\Misc\TechSTL\TechSTL\obj\Debug\TechSTL.pdb

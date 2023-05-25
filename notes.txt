@@ -1,0 +1,11 @@
+﻿Triangle counts
+Mechanical
+ 1062
+ 1156
+ 1676
+Artistic
+259898 Bunny
+ 72940 Doll
+ 78824 Owl
+169054 Sue
+ 48704 Terminator

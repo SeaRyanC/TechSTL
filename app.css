@@ -1,0 +1,140 @@
+﻿canvas {
+    border: solid black 1px;
+    padding: -1px;
+    cursor: crosshair;
+}
+
+body {
+    background: #444;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
+div.main {
+    display: inline-block;
+    padding: 2em;
+    background: #AAA;
+    border: inset #111 3px;
+    position: relative;
+}
+
+div.toolbar {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0.75em;
+    padding-right: 1.5em;
+}
+
+div.toolbar label {
+    display: block;
+    text-align: left;
+}
+
+div.toolbar-header {
+    font-size: 115%;
+    font-weight: bold;
+    font-variant: small-caps;
+    position: relative;
+    left: -0.5em;
+    margin-top: 0.8em;
+    text-align: left;
+}
+
+div.button {
+    cursor: default;
+    border: solid #333 2px;
+    background: #555;
+    color: white;
+    width: 6em;
+    padding: 0.3em;
+    text-align: center;
+    margin: 0.1em;
+}
+
+div.button:hover {
+    background: #777;
+}
+
+
+div.viewports {
+    display: inline-block;
+    position: relative;
+    width: 1000px;
+    height: 800px;
+}
+
+canvas, div.viewport {
+    width: 500px;
+    height: 400px;
+}
+
+div.viewport {
+    display: block;
+    position: absolute;
+    background: #DDD;
+}
+
+div.viewport.top {
+    /* TODO: Why does this need to be -1px to line up with front? */
+    left: 0px;
+    top: 0px;
+}
+
+div.viewport.front {
+    left: 0px;
+    bottom: 0px;
+}
+
+div.viewport.left {
+    right: 0px;
+    bottom: 0px;
+}
+
+div.viewport-label {
+    position: absolute;
+    width: 5em;
+    height: 1.5em;
+    right: 8px;
+    top: 8px;
+
+    background-color: black;
+    color: white;
+
+    text-align: center;
+    font-weight: bold;
+
+    cursor: nesw-resize;
+}
+
+div.status-bar div {
+    display: inline-block;
+}
+
+div.status-bar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 1.2em;
+    background: #888;
+    border-top: solid black 1px;
+    text-align: left;
+    padding: 0.3em;
+    padding-left: 1em;
+}
+
+div.status-bar div.position {
+    font-family: monospace;
+    float: right;
+    text-align: right;
+    width: 15em;
+}
+
+div.status-bar div.grid-spacing {
+    font-family: monospace;
+    float: right;
+}
+
+div.topbar {
+    height: 3em;
+}

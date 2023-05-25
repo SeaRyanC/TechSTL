@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TechSTL</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="knockout-3.1.0.js"></script>
+    <script src="Scripts/three.js"></script>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="stlParsing.js"></script>
+    <script src="stlRender.js"></script>
+    <script src="measure.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Top area -->
+        <div class="topbar">
+            <div data-bind="text: topBar"></div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="toolbar-header">Samples</div>
+            <div data-bind="foreach: sampleButtons">
+                <div class="button" data-bind="text: name, click: loadSample"></div>
+            </div>
+
+            <div class="toolbar-header">Annotations</div>
+            <div class="button" id="addLinearMeasure" title="Linear Measure" data-bind="with: $root, click: addLinearMeasure">├─x─┤</div>
+            <div class="button" id="addDiameterMeasure" title="Diameter Measure">Ø</div>
+            <div class="button" id="addTextAnnotation" title="Text">Text</div>
+
+            <div class="toolbar-header">Views</div>
+            <div class="button" id="crossSection" title="Cross-section">Section</div>
+
+            <div class="toolbar-header">Layers</div>
+            <div data-bind="foreach: layers">
+                <label><input type="checkbox" data-bind="checked: value" /><span data-bind="text: name"/></label>
+            </div>
+        </div>
+
+        <!-- Viewports Quad -->
+        <div class="viewports">
+            <div class="viewport top" data-bind="with: topView">
+                <div class="viewport-label" data-bind="text: name, click: toggle"></div>
+                <canvas id="top"></canvas>
+            </div>
+            <div class="viewport front" data-bind="with: frontView">
+                <div class="viewport-label" data-bind="text: name, click: toggle"></div>
+                <canvas id="front"></canvas>
+            </div>
+
+            <div class="viewport left" data-bind="with: leftView">
+                <div class="viewport-label" data-bind="text: name, click: toggle"></div>
+                <canvas id="left"></canvas>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status" data-bind="text: status">(uninitialized)</div>
+            <div class="position" data-bind="text: position">0.00, 0.00, 0.00</div>
+            <div class="grid-spacing" data-bind="text: gridSpacing">(uninitialized)</div>
+        </div>
+    </div>
+</body>
+</html>

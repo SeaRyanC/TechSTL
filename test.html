@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rendering Tests</title>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="utils.js"></script>
+    <script src="geometry.js"></script>
+    <script src="stlParsing.js"></script>
+    <script src="arrayRenderer.js"></script>
+    <script src="renderTests.js"></script>
+    <script type="text/javascript">
+/*
+        function connect() {
+            document.getElementById('status').innerText = 'Connecting...';
+
+            var ws = new WebSocket('ws://localhost:8081');
+            ws.onmessage = function () {
+                location.reload();
+            };
+            ws.onopen = function () {
+                document.getElementById('status').innerText = 'Ready';
+                ws.send('hello');
+            };
+            ws.onclose = function () {
+                document.getElementById('status').innerText = 'Disconnected, retrying... ';
+                window.setTimeout(connect, 500);
+            };
+
+            var now = Date.now();
+            window.setInterval(function () {
+                var newNow = Date.now();
+                document.getElementById('updateTime').innerText = 'Last reloaded ' + Math.round((newNow - now) / 1000) + '  seconds ago';
+            }, 1000);
+
+            window.setInterval(function () {
+                ws.send('ping! I like you');
+            }, 30000);
+        }
+
+        $(function() {
+            connect();
+        });
+*/
+
+        var now = Date.now();
+        window.setInterval(function () {
+            var newNow = Date.now();
+            document.getElementById('updateTime').innerText = 'Last reloaded ' + Math.round((newNow - now) / 1000) + '  seconds ago';
+        }, 1000);
+
+    </script>
+</head>
+<body>
+    <div id="updateTime">Last reloaded 0 seconds ago</div>
+
+    <div id="testResults"></div>
+</body>
+</html>
